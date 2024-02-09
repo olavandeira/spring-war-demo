@@ -1,4 +1,4 @@
-package com.example.demo.controller;
+package com.example.demo.controller.price;
 
 import com.example.demo.controller.dto.PriceDto;
 import com.example.demo.controller.dto.PriceFindRequestDto;

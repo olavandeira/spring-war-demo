@@ -1,4 +1,4 @@
-package com.example.demo.controller.dto;
+package com.example.demo.controller.error;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

@@ -1,16 +1,12 @@
 package com.example.demo.controller;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.SerializationFeature;
-import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
-import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
+import com.example.demo.controller.error.RestControllerAdvice;
+import com.example.demo.controller.price.PriceFinderController;
 import com.google.gson.JsonParser;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
-import org.springframework.http.converter.HttpMessageConverter;
-import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
@@ -70,22 +66,9 @@ public class PriceFinderControllerTest {
     @BeforeEach
     public void setup() {
         mockMvc = MockMvcBuilders.standaloneSetup(priceFinderController)
-                .setMessageConverters(configureMessageConverters())
                 .setControllerAdvice(RestControllerAdvice.class)
                 .build();
     }
-
-    private HttpMessageConverter<?>[] configureMessageConverters() {
-        MappingJackson2HttpMessageConverter converter = new MappingJackson2HttpMessageConverter();
-        ObjectMapper objectMapper = new ObjectMapper();
-        JavaTimeModule module = new JavaTimeModule();
-        module.addSerializer(new LocalDateTimeSerializer(DateTimeFormatter.ISO_LOCAL_DATE_TIME));
-
-        objectMapper.registerModule(module);
-        objectMapper.configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS, false); // Serialize dates as strings
-        return new HttpMessageConverter<?>[]{converter};
-    }
-
     @Test
     void shouldRetrievePrice() throws Exception {
         mockMvc.perform(
