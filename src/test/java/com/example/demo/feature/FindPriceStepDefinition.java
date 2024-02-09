@@ -1,8 +1,8 @@
 package com.example.demo.feature;
 
-import com.example.demo.PriceDto;
-import com.example.demo.PriceFindResponseDto;
-import com.example.demo.PriceTimeDto;
+import com.example.demo.controller.dto.PriceDto;
+import com.example.demo.controller.dto.PriceFindResponseDto;
+import com.example.demo.controller.dto.PriceTimeDto;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.cucumber.spring.CucumberContextConfiguration;

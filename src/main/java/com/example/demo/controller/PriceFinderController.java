@@ -1,5 +1,9 @@
-package com.example.demo;
+package com.example.demo.controller;
 
+import com.example.demo.controller.dto.PriceDto;
+import com.example.demo.controller.dto.PriceFindRequestDto;
+import com.example.demo.controller.dto.PriceFindResponseDto;
+import com.example.demo.controller.dto.PriceTimeDto;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

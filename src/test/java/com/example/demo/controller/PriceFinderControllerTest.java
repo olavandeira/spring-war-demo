@@ -1,7 +1,5 @@
 package com.example.demo.controller;
 
-import com.example.demo.PriceFinderController;
-import com.example.demo.RestControllerAdvice;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
