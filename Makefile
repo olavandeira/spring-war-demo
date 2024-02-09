@@ -2,8 +2,7 @@
 DOCKER_IMAGE_NAME = java-app
 CONTAINER_NAME = java-app-container
 
-# Default target
-all: clean build run check_health tail_logs
+run-local: clean build run check_health tail_logs
 
 # Target to build the Java application Docker image
 build:
@@ -37,3 +36,8 @@ clean:
 tail_logs:
 	@echo "Tailing logs of the container $(CONTAINER_NAME)..."
 	docker logs -f $(CONTAINER_NAME)
+
+kill:
+	@echo "Killing the container $(CONTAINER_NAME)..."
+	docker stop $(CONTAINER_NAME) || true
+	docker rm $(CONTAINER_NAME) || true
