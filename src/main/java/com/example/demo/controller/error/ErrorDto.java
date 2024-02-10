@@ -5,6 +5,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
 
+import java.util.Map;
+
 @Data
 @Accessors(chain = true)
 @NoArgsConstructor
@@ -13,4 +15,5 @@ public class ErrorDto {
     private String code;
     private String message;
     private String field;
+    private Map<String, Object> requestParams;
 }
