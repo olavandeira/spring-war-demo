@@ -1,4 +1,4 @@
-package com.example.demo.controller.error;
+package com.example.demo.controller.error.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

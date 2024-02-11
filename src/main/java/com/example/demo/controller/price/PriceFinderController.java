@@ -1,7 +1,7 @@
 package com.example.demo.controller.price;
 
-import com.example.demo.controller.dto.PriceFindRequestDto;
-import com.example.demo.controller.dto.PriceFindResponseDto;
+import com.example.demo.controller.price.dto.PriceFindRequestDto;
+import com.example.demo.controller.price.dto.PriceFindResponseDto;
 import com.example.demo.controller.exception.NotFoundException;
 import com.example.demo.service.PriceFinder;
 import jakarta.validation.Valid;

@@ -1,4 +1,4 @@
-package com.example.demo.controller.dto;
+package com.example.demo.controller.price.dto;
 
 import com.example.demo.domain.Price;
 import lombok.Data;

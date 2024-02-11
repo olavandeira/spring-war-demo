@@ -1,4 +1,4 @@
-package com.example.demo.controller.error;
+package com.example.demo.controller.error.dto;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Data;

@@ -1,5 +1,8 @@
 package com.example.demo.controller.error;
 
+import com.example.demo.controller.error.dto.ErrorDto;
+import com.example.demo.controller.error.dto.ErrorResponseDto;
+import com.example.demo.controller.error.dto.ErrorType;
 import com.example.demo.controller.exception.NotFoundException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.AllArgsConstructor;

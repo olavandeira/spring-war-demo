@@ -1,4 +1,4 @@
-package com.example.demo.controller.dto;
+package com.example.demo.controller.price.dto;
 
 
 import jakarta.validation.constraints.NotNull;
